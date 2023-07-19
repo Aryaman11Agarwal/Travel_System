@@ -193,7 +193,7 @@ dispose();
     
     
     public static void main(String args[]){
-        new UpdateCustomer("Akshay");
+        new UpdateCustomer("");
     }
     
 }

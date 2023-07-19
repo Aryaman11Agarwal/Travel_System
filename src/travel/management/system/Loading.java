@@ -73,7 +73,7 @@ public class Loading extends JFrame implements Runnable{
             e.printStackTrace();
         }}
     public static void main(String args []){
-        new Loading("Akshay");
+        new Loading("");
     }
     
 }

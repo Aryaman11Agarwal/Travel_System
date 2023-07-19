@@ -314,7 +314,7 @@ public class Dashboard extends JFrame implements ActionListener{
     }
     
     public static void main(String args[]){
-        new Dashboard("Akshay");
+        new Dashboard("");
     }
     
 }

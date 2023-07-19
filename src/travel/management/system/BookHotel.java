@@ -249,7 +249,9 @@ public class BookHotel extends JFrame implements ActionListener{
              Conn c=new Conn();
              try{
               c.s.executeUpdate("insert into bookhotel values('"+labelusername.getText()+"', '"+chotel.getSelectedItem()+"', '"+tfpersons.getText()+"', '"+tfdays.getText()+"', '"+cac.getSelectedItem()+"', '"+cfood.getSelectedItem()+"', '"+labelid.getText()+"', '"+labelnumber.getText()+"', '"+labelphone.getText()+"', '"+lblprice.getText()+"')");
-                     JOptionPane.showMessageDialog(null, "Hotel Booked Successfully");}
+                     JOptionPane.showMessageDialog(null, "Hotel Booked Successfully");
+             dispose();
+             }
          catch(Exception e){
                  e.printStackTrace();
                  }
@@ -260,7 +262,7 @@ public class BookHotel extends JFrame implements ActionListener{
          }
      }
     public static void main(String args[]){
-        new BookHotel("Akshay");
+        new BookHotel("");
     
 }
     
