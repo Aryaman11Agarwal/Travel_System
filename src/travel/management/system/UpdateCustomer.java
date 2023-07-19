@@ -186,8 +186,8 @@ public class UpdateCustomer extends JFrame implements ActionListener{
             }
         }
         else{
-            setVisible(false);
-            new Dashboard(username).setVisible(true);
+//            
+dispose();
         }
     }
     

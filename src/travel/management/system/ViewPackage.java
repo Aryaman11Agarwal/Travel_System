@@ -129,8 +129,7 @@ public class ViewPackage extends JFrame implements ActionListener{
     }
     
     public void actionPerformed(ActionEvent ae){
-        setVisible(false);
-        new Dashboard(username).setVisible(true);
+        dispose();
         
     }
     

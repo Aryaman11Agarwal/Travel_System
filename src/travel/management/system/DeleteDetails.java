@@ -15,7 +15,9 @@ import java.sql.*;
 public class DeleteDetails extends JFrame implements ActionListener{
     JButton delete;
     String username;
-    DeleteDetails(String username){
+    Dashboard ds;
+    DeleteDetails(String username,Dashboard ds){
+        this.ds=ds;
         this.username=username;
         setBounds(450,180,870,625);
         getContentPane().setBackground(Color.white);
@@ -155,14 +157,16 @@ public class DeleteDetails extends JFrame implements ActionListener{
               
               
               JOptionPane.showMessageDialog(null, "Details Deleted Successfully");
+              ds.dispose();
               dispose();
+              new Login();
             }catch(Exception e){
                 e.printStackTrace();}
         }
     }
     
     public static void main(String args[]){
-        new DeleteDetails("Akshay");
+        new DeleteDetails("Akshay",null);
     }
     
 }

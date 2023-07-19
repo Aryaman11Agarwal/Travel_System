@@ -163,7 +163,7 @@ public class BookPackage extends JFrame implements ActionListener{
      public void actionPerformed(ActionEvent ae){
          
          if(ae.getSource()==back){
-              new Dashboard(username).setVisible(true);
+           //   new Dashboard(username).setVisible(true);
              setVisible(false);
          }
          else{
@@ -194,8 +194,9 @@ public class BookPackage extends JFrame implements ActionListener{
                  Conn c=new Conn();
                  c.s.executeUpdate("insert into bookpackage values('"+username+"', '"+pack+"', '"+persons+"', '"+labelid.getText()+"', '"+labelnumber.getText()+"', '"+labelphone.getText()+"', '"+cost+"')");
                  JOptionPane.showMessageDialog(null, "Package Booked Successfully");
-              //   setVisible(false);
-                  new Dashboard(username).setVisible(true);
+                 //setVisible(false);
+                 // new Dashboard(username).setVisible(true);
+                 dispose();
              }catch(Exception e){
                  e.printStackTrace();
              }

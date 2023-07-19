@@ -146,9 +146,9 @@ public class ViewCustomer extends JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource()==back){
-            setVisible(false);
-            new Dashboard(username).setVisible(true);
-            
+            //setVisible(false);
+           // new Dashboard(username).setVisible(true);
+           dispose(); 
         }
     }
     

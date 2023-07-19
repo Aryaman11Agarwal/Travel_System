@@ -252,7 +252,7 @@ public class Dashboard extends JFrame implements ActionListener{
      
      else if(ae.getSource()==deletepersonaldetails){
         //  setVisible(false);
-      new  DeleteDetails(username).setVisible(true);
+      new  DeleteDetails(username,this).setVisible(true);
       }
        
      else  if(ae.getSource()==destination){
