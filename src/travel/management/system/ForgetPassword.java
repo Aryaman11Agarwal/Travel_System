@@ -119,9 +119,13 @@ public class ForgetPassword extends JFrame implements ActionListener{
                 
                 Conn c=new Conn();
                ResultSet rs= c.s.executeQuery(query);
+//               if(rs.wasNull())
+//                    JOptionPane.showMessageDialog(null, "Incorrect username");
+//               else{
                while(rs.next()){
                    tfname.setText(rs.getString("name"));
                    tfquestion.setText(rs.getString("security"));
+               
                }
               
             }catch(Exception e){
@@ -136,6 +140,8 @@ public class ForgetPassword extends JFrame implements ActionListener{
                 
                 Conn c=new Conn();
                ResultSet rs= c.s.executeQuery(query);
+               if(rs.next()==false)
+                    JOptionPane.showMessageDialog(null, "Incorrect credentials");
                while(rs.next()){
                    tfpassword.setText(rs.getString("password"));
                  
