@@ -17,7 +17,7 @@ public class Conn {
       try{
          Class.forName("com.mysql.cj.jdbc.Driver");
          
-          c=DriverManager.getConnection("jdbc:mysql:///travelManagementSystem","root","Sooryavanshi@1103");
+          c=DriverManager.getConnection("jdbc:mysql:///travelManagementSystem","root","*******************");
           s=c.createStatement();
       }catch(Exception e){
           System.out.println(e);
